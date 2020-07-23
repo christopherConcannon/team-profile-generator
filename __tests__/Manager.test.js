@@ -15,7 +15,7 @@ test('check manager has office number', () => {
   expect(manager.officeNumber).toBe(123);
 })
 
-test("check manager's role overridden to Manager", () => {
+test("manager's role overridden to Manager", () => {
   const manager = new Manager('John Smith', 1, 'john@email.com', 123);
 
   expect(manager.getRole()).toBe('Manager');
