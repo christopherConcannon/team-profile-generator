@@ -1,12 +1,17 @@
 const inquirer = require('inquirer');
-const fs = require('fs');
+
 
 const Engineer = require('./lib/Engineer');
 const Manager = require('./lib/Manager');
 const Intern = require('./lib/Intern');
 const generatePage = require('./src/page-template');
+const { writeFile, copyFile } = require('./utils/generate-site.js');
 
 const employeeDataArr = [];
+
+
+
+
 
 // ask for manager info and push into array
 const promptManager = () => {
@@ -68,10 +73,45 @@ const promptMenu = () => {
 			} else if (data.menuChoice === 'Intern') {
 				promptIntern();
 			} else {
-				generatePage(employeeDataArr);
+        const pageHTML = generatePage(employeeDataArr);
+        return writeFile(pageHTML)
+          .then(writeFileResponse => {
+              console.log(writeFileResponse);
+              return copyFile();
+            })
+            .then(copyFileResponse => {
+              console.log(copyFileResponse);
+            })
+            .catch(err => {
+              console.log(err);
+            });
 			}
 		});
 };
+
+
+
+// promptUser()
+//   .then(promptProject)
+//   .then(portfolioData => {
+//     console.log(portfolioData);
+//     return generatePage(portfolioData);
+//   })
+//   .then(pageHTML => {
+//     return writeFile(pageHTML);
+//   })
+//   .then(writeFileResponse => {
+//     console.log(writeFileResponse);
+//     return copyFile();
+//   })
+//   .then(copyFileResponse => {
+//     console.log(copyFileResponse);
+//   })
+//   .catch(err => {
+//     console.log(err);
+//   });
+
+
 
 const promptEngineer = () => {
 	inquirer
