@@ -10,7 +10,7 @@ const outPutCards = (employeeData) => {
         <div class="card-body py-5 bg-light">
           <ul class="list-group list-group-flush">
             <li class="list-group-item id">ID: ${id}</li>
-            <li class="list-group-item email">Email: <a href="mailto:jared@fakemail.com">${email}</a></li>
+            <li class="list-group-item email">Email: <a href="mailto:${email}">${email}</a></li>
             <li class="list-group-item wildcard">${wildcard}</li>
           </ul>
         </div>
