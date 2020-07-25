@@ -1,19 +1,22 @@
-const buildCard = (employeeObj) => {
-	const { role, name, id, email, wildcard } = employeeObj;
-  return `
-    <div class="card m-4">
-      <div class="card-header bg-primary text-white">
-        <h5 class="card-title name">${name}</h5>
-        <h6 class="card-subtitle mb-2 role">${role}</h6>
-      </div>
-      <div class="card-body py-5 bg-light">
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item id">ID: ${id}</li>
-          <li class="list-group-item email">Email: <a href="mailto:jared@fakemail.com">${email}</a></li>
-          <li class="list-group-item wildcard">${wildcard}</li>
-        </ul>
-      </div>
-    </div>`;
+const outPutCards = (employeeData) => {
+	const outPutArray = employeeData.map((employeeObj) => {
+		const { role, name, id, email, wildcard } = employeeObj;
+		return `
+      <div class="card m-4">
+        <div class="card-header bg-primary text-white">
+          <h5 class="card-title name">${name}</h5>
+          <h6 class="card-subtitle mb-2 role">${role}</h6>
+        </div>
+        <div class="card-body py-5 bg-light">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item id">ID: ${id}</li>
+            <li class="list-group-item email">Email: <a href="mailto:jared@fakemail.com">${email}</a></li>
+            <li class="list-group-item wildcard">${wildcard}</li>
+          </ul>
+        </div>
+      </div>`;
+  });
+  return outPutString = outPutArray.join('\n');
 };
 
 module.exports = (employeeData) => {
@@ -33,7 +36,7 @@ module.exports = (employeeData) => {
         <h2>My Team</h2>
       </header>
       <main class="d-flex flex-wrap p-5 justify-content-center">
-        ${employeeData.map((employeeObj) => buildCard(employeeObj))}
+        ${outPutCards(employeeData)}
       </main>
     
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
