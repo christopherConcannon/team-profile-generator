@@ -25,7 +25,7 @@ test("outputs string with a engineer's github name", () => {
 });
 
 // check that engineer.getRole() returns role output string
-test("engineer's role overridden to Engineer", () => {
+test("outputs string with engineer's role", () => {
 	const engineer = new Engineer('John Smith', 1, 'john@email.com', 'gitboiz');
 
 	expect(engineer.getRole()).toEqual(expect.stringContaining('Engineer'));

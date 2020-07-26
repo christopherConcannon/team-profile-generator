@@ -19,14 +19,14 @@ test('check intern has school name', () => {
 }); 
 
 // check that intern.getSchool() returns school output string
-test('gets a users school name', () => {
+test('outputs string with users school name', () => {
 	const intern = new Intern('John Smith', 1, 'john@email.com', 'U of X');
 
   expect(intern.getSchool()).toEqual(expect.stringContaining(intern.school));
 });
 
 // check that intern.getRole() returns role output string
-test("intern's role overridden to Intern", () => {
+test("outputs string with intern's role", () => {
 	const intern = new Intern('John Smith', 1, 'john@email.com', 'U of X');
 
 	expect(intern.getRole()).toEqual(expect.stringContaining('Intern'));

@@ -31,7 +31,7 @@ test("gets an employee's email", () => {
 })
 
 // check that employee.getRole() method returns 'Employee'
-test("gets an employee's name", () => {
+test("gets an employee's role", () => {
   const employee = new Employee('John Smith', 1, 'john@email.com');
   expect(employee.getRole()).toEqual(expect.stringContaining('Employee'));
 })
