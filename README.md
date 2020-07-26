@@ -24,7 +24,7 @@ Clone project to a directory on your local machine and cd into the team-profile-
 
 ## Usage
 Run node Index to launch application and answer all of the questions that are prompted in the terminal.  When all questions have been answered, your index.html file will appear in the dist folder along with a custom stylesheet, where you can copy it to your project's directory where needed.
-[view demo](https://drive.google.com/file/d/1gP7gdvNM4APuryyKQuI8yzuVbN8tLwEs/view)
+[view demo](https://drive.google.com/file/d/13Fr2NtNjTjwbumeZLdQ5HMzYugiWGzvE/view)
 
 ## License 
 This project is covered under the MIT license 
