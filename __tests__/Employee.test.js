@@ -4,10 +4,6 @@ const emailRegEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+")
 // check that employee object instance is created and returns name, id, and email property with appropriate value types
 test('creates employee object instance', () => {
   const employee = new Employee('John Smith', 1, 'john@email.com');
-  const employee = new Employee(3, '', 'fasfda', '' )
-  const employee = new Employee(3, '', 'fasfda', '' )
-  const employee = new Employee(3, '', 'fasfda', '' )
-  const employee = new Employee(3, '', 'fasfda', '' )
   // expect(employee.name).toBe('John Smith');
   // expect(employee.id).toBe(1);
   // expect(employee.email).toBe('john@email.com');
