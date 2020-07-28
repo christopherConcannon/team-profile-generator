@@ -13,37 +13,37 @@ const employeeDataArr = [];
 
 // email and number regex for inquirer validation
 const emailRegEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-const numRegEx = /^[1-9]*\d$/
+const numRegEx = /^[1-9]*\d$/;
 
 // ask for manager info
 const promptManager = () => {
 	inquirer
 		.prompt([
 			{
-				type    : 'input',
-				name    : 'name',
-        message : "Please enter the team manager's name (Required ad nauseum)",
-        validate : (nameInput) => {
-          if (nameInput) {
-            return true;
-          } else {
-            console.log("\nThe name, please");
-            return false;
-          }
-        }
+				type     : 'input',
+				name     : 'name',
+				message  : "Please enter the team manager's name (Required ad nauseum)",
+				validate : (nameInput) => {
+					if (nameInput) {
+						return true;
+					} else {
+						console.log('\nThe name, please');
+						return false;
+					}
+				}
 			},
 			{
-				type    : 'input',
-				name    : 'id',
-        message : "Please enter the team manager's ID number",
-        validate : (idInput) => {
-          if (idInput.match(numRegEx)) {
-            return true;
-          } else {
-            console.log("\nPlease enter a NUMBER");
-            return false;
-          }
-        }
+				type     : 'input',
+				name     : 'id',
+				message  : "Please enter the team manager's ID number",
+				validate : (idInput) => {
+					if (idInput.match(numRegEx)) {
+						return true;
+					} else {
+						console.log('\nPlease enter a NUMBER');
+						return false;
+					}
+				}
 			},
 			{
 				type     : 'input',
@@ -59,17 +59,17 @@ const promptManager = () => {
 				}
 			},
 			{
-				type    : 'input',
-				name    : 'officeNo',
-        message : "Please enter the team manager's office number",
-        validate : (officeInput) => {
-          if (officeInput.match(numRegEx)) {
-            return true;
-          } else {
-            console.log("\nPlease enter a NUMBER");
-            return false;
-          }
-        }
+				type     : 'input',
+				name     : 'officeNo',
+				message  : "Please enter the team manager's office number",
+				validate : (officeInput) => {
+					if (officeInput.match(numRegEx)) {
+						return true;
+					} else {
+						console.log('\nPlease enter a NUMBER');
+						return false;
+					}
+				}
 			}
 		])
 		.then((data) => {
@@ -132,36 +132,36 @@ const promptEngineer = () => {
 	inquirer
 		.prompt([
 			{
-				type    : 'input',
-				name    : 'name',
-        message : "Please enter the team engineer's name",
-        validate : (nameInput) => {
-          if (nameInput) {
-            return true;
-          } else {
-            console.log("\nWe'll need the name, thank you...");
-            return false;
-          }
-        }
+				type     : 'input',
+				name     : 'name',
+				message  : "Please enter the team engineer's name",
+				validate : (nameInput) => {
+					if (nameInput) {
+						return true;
+					} else {
+						console.log("\nWe'll need the name, thank you...");
+						return false;
+					}
+				}
 			},
 			{
-				type    : 'input',
-				name    : 'id',
-        message : "Please enter the team engineer's ID number",
-        validate : (idInput) => {
-          if (idInput.match(numRegEx)) {
-            return true;
-          } else {
-            console.log("\nPlease enter a NUMBER");
-            return false;
-          }
-        }
+				type     : 'input',
+				name     : 'id',
+				message  : "Please enter the team engineer's ID number",
+				validate : (idInput) => {
+					if (idInput.match(numRegEx)) {
+						return true;
+					} else {
+						console.log('\nPlease enter a NUMBER');
+						return false;
+					}
+				}
 			},
 			{
-				type    : 'input',
-				name    : 'email',
-        message : "Please enter the team engineer's email address",
-        validate : (emailInput) => {
+				type     : 'input',
+				name     : 'email',
+				message  : "Please enter the team engineer's email address",
+				validate : (emailInput) => {
 					if (emailInput.match(emailRegEx)) {
 						return true;
 					} else {
@@ -171,17 +171,17 @@ const promptEngineer = () => {
 				}
 			},
 			{
-				type    : 'input',
-				name    : 'github',
-        message : "Please enter the team engineer's Github username",
-        validate : (githubInput) => {
-          if (githubInput) {
-            return true;
-          } else {
-            console.log("\nGive us the name!");
-            return false;
-          }
-        }
+				type     : 'input',
+				name     : 'github',
+				message  : "Please enter the team engineer's Github username",
+				validate : (githubInput) => {
+					if (githubInput) {
+						return true;
+					} else {
+						console.log('\nGive us the name!');
+						return false;
+					}
+				}
 			}
 		])
 		// as above, instantiate object instance, derive output object, push to array, and call menu prompt
@@ -204,36 +204,36 @@ const promptIntern = () => {
 	inquirer
 		.prompt([
 			{
-				type    : 'input',
-				name    : 'name',
-        message : "Please enter the team intern's name",
-        validate : (nameInput) => {
-          if (nameInput) {
-            return true;
-          } else {
-            console.log("\nOnce again, with feeling...");
-            return false;
-          }
-        }
+				type     : 'input',
+				name     : 'name',
+				message  : "Please enter the team intern's name",
+				validate : (nameInput) => {
+					if (nameInput) {
+						return true;
+					} else {
+						console.log('\nOnce again, with feeling...');
+						return false;
+					}
+				}
 			},
 			{
-				type    : 'input',
-				name    : 'id',
-        message : "Please enter the team intern's ID number",
-        validate : (idInput) => {
-          if (idInput.match(numRegEx)) {
-            return true;
-          } else {
-            console.log("\nPlease enter a NUMBER");
-            return false;
-          }
-        }
+				type     : 'input',
+				name     : 'id',
+				message  : "Please enter the team intern's ID number",
+				validate : (idInput) => {
+					if (idInput.match(numRegEx)) {
+						return true;
+					} else {
+						console.log('\nPlease enter a NUMBER');
+						return false;
+					}
+				}
 			},
 			{
-				type    : 'input',
-				name    : 'email',
-        message : "Please enter the team intern's email address",
-        validate : (emailInput) => {
+				type     : 'input',
+				name     : 'email',
+				message  : "Please enter the team intern's email address",
+				validate : (emailInput) => {
 					if (emailInput.match(emailRegEx)) {
 						return true;
 					} else {
@@ -243,17 +243,17 @@ const promptIntern = () => {
 				}
 			},
 			{
-				type    : 'input',
-				name    : 'school',
-        message : "Please enter the team intern's school",
-        validate : (schoolInput) => {
-          if (schoolInput) {
-            return true;
-          } else {
-            console.log("\nThe name of the academic institution or program");
-            return false;
-          }
-        }
+				type     : 'input',
+				name     : 'school',
+				message  : "Please enter the team intern's school",
+				validate : (schoolInput) => {
+					if (schoolInput) {
+						return true;
+					} else {
+						console.log('\nThe name of the academic institution or program');
+						return false;
+					}
+				}
 			}
 		])
 		// as above, instantiate object instance, derive output object, push to array, and call menu prompt
@@ -273,5 +273,7 @@ const promptIntern = () => {
 };
 
 // initialize app
-console.log('Good day.  At the prompt, please enter the requested details to begin building your team.');
+console.log(
+	'Good day.  At the prompt, please enter the requested details to begin building your team.'
+);
 promptManager();

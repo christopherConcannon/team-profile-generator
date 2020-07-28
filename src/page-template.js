@@ -15,8 +15,8 @@ const outPutCards = (employeeData) => {
           </ul>
         </div>
       </div>`;
-  });
-  return outPutString = outPutArray.join('\n');
+	});
+	return (outPutString = outPutArray.join('\n'));
 };
 
 module.exports = (employeeData) => {

@@ -12,10 +12,10 @@ test('check properties inherited from Employee', () => {
 
 // check github property added in own constructor
 test('check own property github name', () => {
-  const engineer = new Engineer('John Smith', 1, 'john@email.com', 'gitboiz' );
+	const engineer = new Engineer('John Smith', 1, 'john@email.com', 'gitboiz');
 
-  expect(engineer).toHaveProperty('github', expect.any(String));
-}); 
+	expect(engineer).toHaveProperty('github', expect.any(String));
+});
 
 // check that engineer.getGithub() returns github user name output string
 test("outputs string with a engineer's github name", () => {
